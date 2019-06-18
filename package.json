@@ -1,0 +1,23 @@
+{
+  "name": "led-practice",
+  "version": "1.0.0",
+  "description": "turn on/off a led",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raspberry-projects/led-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raspberry-projects/led-practice/issues"
+  },
+  "homepage": "https://github.com/raspberry-projects/led-practice#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "onoff": "^4.1.2"
+  }
+}
