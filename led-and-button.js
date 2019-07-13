@@ -10,8 +10,9 @@ button.watch((err, value) => {
   }
 
   console.log(`value: ${value}`);
+  console.log(`led readSync(): ${led.readSync() ^ 1}`);
  
-  led.writeSync(value);
+  led.writeSync(led.readSync() ^ 1);
 });
  
 process.on('SIGINT', () => {
