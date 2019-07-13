@@ -1,6 +1,6 @@
 const Gpio = require('onoff').Gpio;
 const led = new Gpio(17, 'out');
-const button = new Gpio(4, 'in', 'rising');
+const button = new Gpio(4, 'in', 'both');
 
 console.log('Programa iniciado, presiona el botón para encender el led.');
  
@@ -10,9 +10,8 @@ button.watch((err, value) => {
   }
 
   console.log(`value: ${value}`);
-  console.log(`led readSync(): ${led.readSync() ^ 1}`);
  
-  led.writeSync(led.readSync() ^ 1);
+  led.writeSync(value);
 });
  
 process.on('SIGINT', () => {
